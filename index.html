@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" type="image/jpg" href="logo.jpg">
+	<title>BLOG</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /*body{
+  	background-image: url("lockscreen.jpg");
+  	
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(128,128,128);	
+  	}*/
+</style>
+</head>
+
+<body onload= "startTime()">
+	<ul> 
+    
+		<div id="notificons">
+        <li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
+        <li id= "battery" class="fa" >&#xf240;</li>
+        <li id="time"> </li>  
+    
+    </div>
+    <div id="notifname">NIKHIL SHAKOHI</div>
+	</ul>
+<br>
+
+
+<h1 id="locktime" ></h1>
+<h3 id="today"></h3>
+
+<p style="text-align: center;"><a href="home.html"><button id="unlockbtn" class="button"><span>UNLOCK BLOG</span></button></a></p> 
+<hr style="visibility: hidden;"><br><br>
+
+  <nav>
+    <a id="navicons" class="fa fa-chevron-left" href="index.html"></a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
+    <a id="navicons" class="fa fa-circle" href="index.html"></a> </li>
+    <a id="navicons" class="fa fa-square" href="index.html" style="font-size: 2em"> </a> <span> <sub style="  bottom: 0%; position:fixed; right: 0; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2017 | ALL RIGHTS RESERVED .</sub> </span> </li> 
+  </nav>
+
+
+<script>
+	function startTime()
+ 	{
+ 		var today= new Date();
+ 		var h= today.getHours();
+ 		var m= today.getMinutes();
+ 		var s= today.getSeconds();
+		h= checktime(h);		
+ 		m= checktime(m);
+		s= checktime(s);
+ 		document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+ 		document.getElementById('locktime').innerHTML = h + ":" + m + ":" + s;
+    document.getElementById('today').innerHTML = today.toDateString();
+    var t= setTimeout(startTime, 500); 
+ 		document.getElementById('day').innerHTML = today.toDateString();
+ 	}
+ 	function checktime(i)
+ 	{
+ 		if(i<10) {
+ 			i= "0" + i; }
+ 		return i;
+ 	} 
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
